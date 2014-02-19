@@ -41,7 +41,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('https://redbooth.com/api/2/account').parsed
+        @raw_info ||= access_token.get("#{options[:client_options][:site]}/account").parsed
       end
     end
   end
