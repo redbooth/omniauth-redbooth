@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'omniauth-redbooth'
 require 'multi_json'
+require 'pry'
 
 class OmniauthRedbooth < Sinatra::Base
 
@@ -16,10 +17,12 @@ class OmniauthRedbooth < Sinatra::Base
   end
 
   get '/auth/:provider/callback' do
-    MultiJson.encode(request.env)
+    request
+    MultiJson.encode(request.env['omniauth.auth'])
   end
 
   get '/auth/failure' do
+    request
     MultiJson.encode(request.env)
   end
 
@@ -46,10 +49,11 @@ use Rack::Session::Cookie, :secret => 'secret identity'
 use OmniAuth::Builder do
   provider :redbooth, ENV['CONSUMER_KEY'], ENV['CONSUMER_SECRET'],
     client_options: {
-      site: 'http://localhost:3000/api/2',
+      site: 'http://localhost:3000/api/3',
       token_url: 'http://localhost:3000/oauth2/token',
       authorize_url: 'http://localhost:3000/oauth2/authorize'
-    }
+    },
+    scope: 'all'
 end
 
 run OmniauthRedbooth.new
