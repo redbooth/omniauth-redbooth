@@ -19,7 +19,7 @@ Here's an example for adding the middleware to a Rails app in `config/initialize
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :signnow, ENV['REDBOOTH_APP_ID'], ENV['REDBOOTH_APP_SECRET']
+  provider :redbooth, ENV['REDBOOTH_APP_ID'], ENV['REDBOOTH_APP_SECRET']
 end
 ```
 
