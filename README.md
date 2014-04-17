@@ -23,4 +23,4 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-You can now access the OmniAuth Google OAuth2 URL: `/auth/redbooth`
+You can now access the URL: `/auth/redbooth`
