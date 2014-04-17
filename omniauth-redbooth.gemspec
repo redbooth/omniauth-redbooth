@@ -1,15 +1,15 @@
 require File.expand_path('../lib/omniauth-redbooth/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Andres Bravo", "Carlos Saura"]
+  gem.authors       = ["Andres Bravo", "Carlos Saura", "Pau Ramon"]
   gem.email         = ["support@redbooth.com"]
-  gem.description   = %q{Offcial OmniAuth strategy for Redbooth.com.}
+  gem.description   = %q{Official OmniAuth strategy for Redbooth.com.}
   gem.summary       = gem.description
   gem.homepage      = "https://github.com/redbooth/omniauth-redbooth"
 
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "omniauth-signnow"
+  gem.name          = "omniauth-redbooth"
   gem.require_paths = ["lib"]
   gem.version       = OmniAuth::Redbooth::VERSION
 
