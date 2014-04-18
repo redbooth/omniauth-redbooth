@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-signnow (0.0.1)
+    omniauth-redbooth (0.0.1)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1.1)
 
@@ -124,7 +124,7 @@ DEPENDENCIES
   guard
   guard-bundler
   guard-rspec
-  omniauth-signnow!
+  omniauth-redbooth!
   rack-test
   rake
   rb-fsevent

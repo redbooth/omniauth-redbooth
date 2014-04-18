@@ -47,7 +47,9 @@ end
 use Rack::Session::Cookie, :secret => 'secret identity'
 
 use OmniAuth::Builder do
-  provider :redbooth, ENV['CONSUMER_KEY'], ENV['CONSUMER_SECRET'],
+  provider :redbooth, 
+    ENV['CONSUMER_KEY'] || '_your_consumer_key_', 
+    ENV['CONSUMER_SECRET'] || '_your_consumer_secret_',
     client_options: {
       site: 'http://localhost:3000/api/3',
       token_url: 'http://localhost:3000/oauth2/token',
