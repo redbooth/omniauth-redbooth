@@ -1,7 +1,7 @@
 # OmniAuth Redbooth.com
 
 An official OmniAuth strategy for authenticating to Redbooth.com using OAuth2. To use it, you'll
-need to have a Redbooth.com [developer account](https://redbooth.com/oauth_clients/).
+need to have a Redbooth.com [developer account](http://developer.redbooth.com/).
 
 ## Installation
 
