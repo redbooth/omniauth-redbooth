@@ -12,8 +12,8 @@ module OmniAuth
       # initializing your consumer from the OAuth gem.
       option :client_options, {
         site: 'https://redbooth.com/api/3',
-        authorize_url: 'https://redbooth.com/oauth/authorize',
-        token_url: 'https://redbooth.com/oauth/token'
+        authorize_url: 'https://redbooth.com/oauth2/authorize',
+        token_url: 'https://redbooth.com/oauth2/token'
       }
 
       option :authorize_params, {
