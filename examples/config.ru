@@ -27,12 +27,12 @@ class OmniauthRedbooth < Sinatra::Base
   end
 
   get '/refresh_token' do
-    client_id = ENV['CONSUMER_KEY']
-    client_secret = ENV['CONSUMER_SECRET']
+    client_id = ENV['CLIENT_ID'] || '_your_consumer_key_'
+    client_secret = ENV['CLIENT_SECRET'] || '_your_consumer_secret_'
     oauth2_urls = {
-      site: 'http://localhost:3000/api/2',
-      token_url: 'http://localhost:3000/oauth2/token',
-      authorize_url: 'http://localhost:3000/oauth2/authorize'
+      site: 'https://redbooth.com/api/3',
+      token_url: 'https://redbooth.com/oauth2/token',
+      authorize_url: 'https://redbooth.com/oauth2/authorize'
     }
 
     @oauth2_client = OAuth2::Client.new(client_id, client_secret, oauth2_urls)
@@ -47,13 +47,13 @@ end
 use Rack::Session::Cookie, :secret => 'secret identity'
 
 use OmniAuth::Builder do
-  provider :redbooth, 
-    ENV['CONSUMER_KEY'] || '_your_consumer_key_', 
-    ENV['CONSUMER_SECRET'] || '_your_consumer_secret_',
+  provider :redbooth,
+    ENV['CLIENT_ID'] || '_your_consumer_key_',
+    ENV['CLIENT_SECRET'] || '_your_consumer_secret_',
     client_options: {
-      site: 'http://localhost:3000/api/3',
-      token_url: 'http://localhost:3000/oauth2/token',
-      authorize_url: 'http://localhost:3000/oauth2/authorize'
+      site: 'https://redbooth.com/api/3',
+      token_url: 'https://redbooth.com/oauth2/token',
+      authorize_url: 'https://redbooth.com/oauth2/authorize'
     },
     scope: 'all'
 end
