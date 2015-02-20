@@ -30,11 +30,11 @@ describe OmniAuth::Strategies::Redbooth do
   describe '#client_options' do
 
     it 'should be initialized with correct authorize url' do
-      expect(subject.client.options[:authorize_url]).to eql 'https://redbooth.com/oauth/authorize'
+      expect(subject.client.options[:authorize_url]).to eql 'https://redbooth.com/oauth2/authorize'
     end
 
     it 'should be initialized with correct token url' do
-      expect(subject.client.options[:token_url]).to eql 'https://redbooth.com/oauth/token'
+      expect(subject.client.options[:token_url]).to eql 'https://redbooth.com/oauth2/token'
     end
 
     describe "overrides" do
