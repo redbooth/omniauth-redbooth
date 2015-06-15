@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-redbooth (0.0.3)
+    omniauth-redbooth (0.0.4)
       omniauth-oauth2 (~> 1.2.0)
 
 GEM
@@ -44,9 +44,9 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    hashie (3.4.0)
+    hashie (3.4.2)
     hitimes (1.2.2)
-    jwt (1.2.1)
+    jwt (1.5.0)
     listen (2.8.5)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
