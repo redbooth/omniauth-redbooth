@@ -43,6 +43,22 @@ module OmniAuth
       def raw_info
         @raw_info ||= access_token.get("#{options[:client_options][:site]}/me").parsed
       end
+
+      # Override OmniAuth's `request` method and make sure that
+      # `request.url` is properly defined when `PATH_INFO` doesn't
+      # start with a slash.
+      #
+      # This is needed because when mounting an engine on the root,
+      # the `path_prefix` cannot start with a slash. Because of that
+      # `request.url` becomes host:portpath (notice the lack of a slash).
+      #
+      # This code sets the `SCRIPT_NAME` environment variable to a slash
+      # if it's empty (meaning that it's the root) and then calls
+      # the parent code which instantiates a request.
+      def request
+        @env['SCRIPT_NAME'] = '/' if @env['SCRIPT_NAME'] == ''
+        super
+      end
     end
   end
 end
