@@ -4,6 +4,9 @@
 
 ### Added
 ### Changed
+- remove version limit on omniauth-oath2 v1.3.1
+- added the documented workaround to cleanly support omniauth-oauth2 v1.4.0
+
 ### Deprecated
 ### Removed
 ### Deprecated
