@@ -3,11 +3,28 @@
 ## [Unreleased]
 
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Deprecated
+### Fixed
+### Security
+
+## [1.0.2] - 2017-04-03
+
+### Added
 
 - Workaround on `#callback_url` for omniauth-oauth2 1.4.0
 
 ### Changed
+
+- CI test will only run on ruby > 2.2.x
+
 ### Deprecated
+
+- Ruby 1.9.3
+- Ruby 2.1
+
 ### Removed
 
 - Restriction on omniauth-oauth2 `< 1.4.0`
@@ -39,7 +56,8 @@
 ## Previous changes
 Undocumented. Please review git commits history.
 
-[Unreleased]: https://github.com/redbooth/omniauth-redbooth/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/redbooth/omniauth-redbooth/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/redbooth/omniauth-redbooth/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/redbooth/omniauth-redbooth/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/redbooth/omniauth-redbooth/compare/0.0.4...1.0.0
 
