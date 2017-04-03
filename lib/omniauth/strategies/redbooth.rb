@@ -27,6 +27,17 @@ module OmniAuth
         { 'raw_info' => raw_info }
       end
 
+      # This is needed in order to support omniauth-oauth2 1.4.0, as for this
+      # version they made the gem more supportive of the OAuth2 standard,
+      # unfortunately not all OAuth2 providers support it.
+      #
+      # Theres more information about it here:
+      #
+      # https://github.com/intridea/omniauth-oauth2/issues/81
+      def callback_url
+        full_host + script_name + callback_path
+      end
+
       def raw_info
         @raw_info ||=
           access_token.get("#{options[:client_options][:site]}/me").parsed

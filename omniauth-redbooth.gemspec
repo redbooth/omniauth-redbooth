@@ -13,12 +13,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = OmniAuth::Redbooth::VERSION
 
-  # Using 1.3.x branch since 1.4 added a non backward compatible change which
-  # prevents this gem from working.
-  #
-  # The issue is documented here:
-  # https://github.com/intridea/omniauth-oauth2/issues/81
-  gem.add_dependency 'omniauth-oauth2', '>= 1.0', '<= 1.3.1'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.0'
 
   gem.add_development_dependency 'rspec', '~> 3.0'
   gem.add_development_dependency 'rspec-its', '~> 1.2'

@@ -3,9 +3,15 @@
 ## [Unreleased]
 
 ### Added
+
+- Workaround on `#callback_url` for omniauth-oauth2 1.4.0
+
 ### Changed
 ### Deprecated
 ### Removed
+
+- Restriction on omniauth-oauth2 `< 1.4.0`
+
 ### Deprecated
 ### Fixed
 ### Security
