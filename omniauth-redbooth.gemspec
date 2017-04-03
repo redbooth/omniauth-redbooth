@@ -32,10 +32,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'growl', '~> 1.0'
   gem.add_development_dependency 'sinatra', '~> 1.4'
   gem.add_development_dependency 'rake', '~> 10.4'
-
-  if Gem.ruby_version < Gem::Version.new('2.0.0')
-    gem.add_development_dependency 'debugger'
-  else
-    gem.add_development_dependency 'byebug'
-  end
+  gem.add_development_dependency 'byebug'
 end
